@@ -135,6 +135,7 @@ while True:
     if letra in secreto:
         print(f'{secreto_temporario:-^50}')
         print(f'UHUULLL, {nome_forc} a letra "{letra} " existe na palavra secreta. ')
+
     else:
         print()
         print(f'AFFFzzz, {nome_forc} a letra "{letra} " NAO EXISTE na palavra secreta. ')
@@ -143,11 +144,13 @@ while True:
         digitadas.pop()
 
 
+
     for letra_secreta in secreto:
         if letra_secreta in digitadas:
-            secreto_temporario += letra_secreta
+            secreto_temporario +=  letra_secreta.upper()
         else:
-            secreto_temporario += '*'
+            secreto_temporario +=  ' * '
+
 
     if secreto_temporario == secreto:
         print()
